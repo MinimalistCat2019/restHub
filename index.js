@@ -37,5 +37,5 @@ app.listen(port, function () {
 
 
 
-
-mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true});
