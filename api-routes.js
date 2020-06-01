@@ -3,7 +3,7 @@ const router = require('express').Router();
 router.get('/', function (req,res) {
     res.json({
         status: 'API Is Working',
-        message: 'Welcome to RESThub crafted with Express and Nodemon!'
+        message: 'Welcome to the api for Video Interview Tips!'
     });
 });
 

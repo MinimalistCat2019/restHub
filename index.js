@@ -9,14 +9,14 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
 const apiRoutes = require("./api-routes");
-// const cors = require('cors');
+const cors = require('cors');
 
 
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-// app.use(cors)
+app.use(cors)
 app.use(bodyParser.json());
 
 
@@ -30,7 +30,7 @@ if (!db) {
 
 app.listen(process.env.PORT || 8080);
 
-app.get('/', (req, res) => res.send('Hello World with Express and Nodemon'));
+app.get('/', (req, res) => res.send('Video Interview Practise API'));
 
 app.use('/api', apiRoutes);
 
